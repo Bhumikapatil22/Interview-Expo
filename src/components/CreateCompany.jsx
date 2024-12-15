@@ -42,7 +42,7 @@ function CreateCompany() {
     console.log(formData);
 
     try {
-      const response = await axios.post('http://localhost:3000/api/v1/company/create', formData);
+      const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/company/create`, formData);
       // alert(response.data.message);
        navigate(`/get-company`);
     } catch (error) {
