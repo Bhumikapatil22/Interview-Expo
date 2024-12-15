@@ -45,7 +45,7 @@ const CreateQuestion = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/question/create",
+        `${process.env.REACT_APP_API_BASE_URL}/question/create`,
         {
           company: companyId,
           questions,
