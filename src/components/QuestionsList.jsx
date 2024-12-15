@@ -23,7 +23,7 @@ const QuestionsList = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/questions/get`); // Adjust API URL
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/questions/get`); // Adjust API URL
         const questions = response.data.questions;
 
         // Group questions by company name
