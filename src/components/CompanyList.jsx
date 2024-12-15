@@ -13,7 +13,7 @@ const CompanyList = () => {
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.REACT_APP_API_BASE_URL}/company/get`);
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/company/get`);
         console.log(response.data);
         if (response.data?.companies) {
           setCompanies(response.data.companies);
