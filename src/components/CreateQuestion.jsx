@@ -45,7 +45,7 @@ const CreateQuestion = () => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}/question/create`,
+        `${import.meta.env.VITE_API_BASE_URL}/question/create`,
         {
           company: companyId,
           questions,
