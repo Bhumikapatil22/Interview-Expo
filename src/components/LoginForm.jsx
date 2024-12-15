@@ -9,7 +9,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/login`, {
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/login`, {
         email,
         password,
       });
